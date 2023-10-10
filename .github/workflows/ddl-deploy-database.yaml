@@ -1,0 +1,13 @@
+# This github action will create the database
+
+name: Deploy Database
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    name: Deploy PostGreSQL DB
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Install postgres-client on ubunutu
+      run: sudo apt-get update && sudo apt-get install postgresql-client
