@@ -4,7 +4,7 @@ The codebase for PostGres db.
 
 ## Sources for Github Actions 📖
 
-- https://medium.com/chrisrbailey/github-actions-using-postgres-postgis-and-psql-e920a2aea7e1
+- https://www.timescale.com/blog/how-to-install-psql-on-mac-ubuntu-debian-windows/
 - https://www.postgresql.org/docs/current/app-psql.html
 
 
