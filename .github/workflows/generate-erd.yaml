@@ -27,8 +27,11 @@ jobs:
           echo "*****************************"
           cd ..
           mv DDL/all.sql ./all.sql
+
+    - name: Install Graphviz
+      run: sudo apt install graphviz
     
-    - name: Install erdot
+    - name: Install ERDot
       run: |
               pip3 install ERDot
 
