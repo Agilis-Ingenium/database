@@ -1,0 +1,26 @@
+# This github action will draw the ERD from the DDL
+
+# Adapting the code and tools described in this article to make the workflow: 
+# https://ckhung.medium.com/drawing-er-diagram-from-sql-file-alone-e7bef8cfe34b
+
+name: Generate ERD
+on:
+  workflow_dispatch:
+jobs:
+  install:
+    name: Install the requirements
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Install erdot
+      run: |
+              pip3 install ERDot
+
+    - name: Install BurntSushi
+      run: |
+              sudo apt install -y haskell-stack
+              stack upgrade
+              wget https://github.com/BurntSushi/erd/archive/refs/heads/master.zip -O erd-master.zip
+              unzip erd-master.zip
+              cd erd-master/
+              stack install
