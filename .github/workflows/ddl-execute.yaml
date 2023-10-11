@@ -1,11 +1,11 @@
 # This github action will create the database
 
-name: Deploy Database
+name: Execute DDL
 on:
   workflow_dispatch:
 jobs:
   deploy:
-    name: Deploy PostGreSQL DB
+    name: Execute to DDL on Instance
     runs-on: ubuntu-latest
     
     steps:
@@ -15,14 +15,11 @@ jobs:
       run: sudo apt-get update && sudo apt-get install postgresql-client
     - name: PSQL Connect
       run: psql postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com/ofnpknxi -c 'SELECT version()'
-    - name: Concat Files (#!)
+    - name: Concat SQL and Execute
       run: |
           cd DDL
           cat *.sql >> all.sql
           echo "**** COMMANDS TO EXCUTE *****"
           echo "$(<all.sql )"
           echo "*****************************"
-          psql postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com/ofnpknxi -f all.sql
-      
-          
-            
+          psql postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com/ofnpknxi -f all.sql   
