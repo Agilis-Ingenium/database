@@ -24,3 +24,11 @@ jobs:
               unzip erd-master.zip
               cd erd-master/
               stack install
+
+    - name: PHP Steps
+      run: |
+              mkdir php-steps && cd php-steps
+              wget https://gist.githubusercontent.com/ckhung/c208ad5b72e7ebe216fd0bfc7fb1cb7a/raw/498bfb8a66959021ecc941cd4f39f484d28418c8/pmysql.php
+              composer require iamcal/sql-parser
+
+              
