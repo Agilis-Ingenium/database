@@ -60,4 +60,10 @@ jobs:
       run: |
         php ./php-steps/pmysql.php all.sql | json2erd.py -t busu | erd -f svg > erd.svg
         ls
+
+    - name: Upload SVG
+      uses: actions/upload-artifact@v3
+      with:
+        name: erd.svg
+        path: erd.svg
               
