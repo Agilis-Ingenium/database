@@ -55,5 +55,5 @@ jobs:
 
     - name: Run the drawing commands
       run: |
-        php pmysql.php all.sql
+        php ./php-steps/pmysql.php all.sql
               
