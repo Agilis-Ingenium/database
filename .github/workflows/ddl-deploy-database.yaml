@@ -17,6 +17,7 @@ jobs:
       run: psql postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com/ofnpknxi -c 'SELECT version()'
     - name: Concat Files (#!)
       run: |
+          cd DDL
           cat *.sql >> all.sql
           echo "$(<all.txt )"
             
