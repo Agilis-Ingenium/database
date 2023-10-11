@@ -20,4 +20,8 @@ jobs:
           cd DDL
           cat *.sql >> all.sql
           echo "$(<all.sql )"
+    - name: Run the DDL SQL against instance
+      run: psql postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com/ofnpknxi -f all.sql
+      
+          
             
