@@ -58,7 +58,7 @@ jobs:
 
     - name: Run the drawing commands
       run: |
-        php ./php-steps/pmysql.php all.sql | json2erd.py -t busu | erd -f svg > erd.svg
+        # php ./php-steps/pmysql.php all.sql | json2erd.py -t busu | erd -f svg > erd.svg
         php ./php-steps/pmysql.php all.sql | json2erd.py -t ehne > test.json
         ls
 
