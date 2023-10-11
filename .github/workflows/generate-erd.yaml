@@ -12,6 +12,22 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Prepare the DDL
+      run: echo "Prepare the DDL"
+      
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    - name: Concat SQL and Execute
+      run: |
+          cd DDL
+          cat *.sql >> all.sql
+          echo "**** COMMANDS TO DRAW *****"
+          echo "$(<all.sql )"
+          echo "*****************************"
+          cd ..
+          mv DDL/all.sql ./all.sql
+    
     - name: Install erdot
       run: |
               pip3 install ERDot
@@ -30,5 +46,14 @@ jobs:
               mkdir php-steps && cd php-steps
               wget https://gist.githubusercontent.com/ckhung/c208ad5b72e7ebe216fd0bfc7fb1cb7a/raw/498bfb8a66959021ecc941cd4f39f484d28418c8/pmysql.php
               composer require iamcal/sql-parser
+              cd ..
 
+    - name: JSON2ERD
+      run: |
+              wget https://gist.githubusercontent.com/ckhung/c208ad5b72e7ebe216fd0bfc7fb1cb7a/raw/498bfb8a66959021ecc941cd4f39f484d28418c8/json2erd.py -P ~/.local/bin/
+              chmod a+x ~/.local/bin/json2erd.py
+
+    - name: Run the drawing commands
+      run: |
+        php pmysql.php all.sql
               
