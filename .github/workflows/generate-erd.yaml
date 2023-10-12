@@ -3,22 +3,19 @@
 # Adapting the code and tools described in this article to make the workflow: 
 # https://nsaunders.wordpress.com/2009/01/11/easy-visualisation-of-database-schemas-using-sqlfairy/
 
-name: Generate ERD with Fairy
+name: Generate ERD with Fairy SQL
 on:
   workflow_dispatch:
 jobs:
   install:
-    name: Install the requirements
+    name: Generate ERD Diagram
     runs-on: ubuntu-latest
     
-    steps:
-    - name: Prepare the DDL
-      run: echo "Prepare the DDL"
-      
+    steps: 
     - name: Check out code
       uses: actions/checkout@v4
 
-    - name: Concat SQL and Execute
+    - name: Concat SQL
       run: |
           cd DDL
           cat *.sql >> all.sql
@@ -32,10 +29,10 @@ jobs:
       run: sudo apt-get install sqlfairy
 
     - name: Run the drawing command
-      run: 	sqlt-graph -f MySQL -o mydatabase.png -t png all.sql
+      run: 	sqlt-graph -f MySQL -o erd.png -t png all.sql
 
     - name: Upload PNG
       uses: actions/upload-artifact@v3
       with:
-        name: mydatabase.png
-        path: mydatabase.png
+        name: erd.png
+        path: erd.png
