@@ -1,0 +1,41 @@
+# This github action will draw the ERD from the DDL
+
+# Adapting the code and tools described in this article to make the workflow: 
+# https://nsaunders.wordpress.com/2009/01/11/easy-visualisation-of-database-schemas-using-sqlfairy/
+
+name: Generate ERD with Fairy
+on:
+  workflow_dispatch:
+jobs:
+  install:
+    name: Install the requirements
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Prepare the DDL
+      run: echo "Prepare the DDL"
+      
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    - name: Concat SQL and Execute
+      run: |
+          cd DDL
+          cat *.sql >> all.sql
+          echo "**** COMMANDS TO DRAW *****"
+          echo "$(<all.sql )"
+          echo "*****************************"
+          cd ..
+          mv DDL/all.sql ./all.sql
+
+    - name: Install SQL Fairy
+      run: sudo apt-get install sqlfairy
+
+    - name: Run the drawing command
+      run: 	sqlt-graph -f MySQL -o mydatabase.png -t png all.sql
+
+    - name: Upload PNG
+      uses: actions/upload-artifact@v3
+      with:
+        name: mydatabase.png
+        path: mydatabase.png
