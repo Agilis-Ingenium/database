@@ -1,0 +1,25 @@
+# This github action will import all data
+
+name: Import Data
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    name: Import Data into DB
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+    - name: Install postgres-client on ubunutu
+      run: sudo apt-get update && sudo apt-get install postgresql-client
+    - name: PSQL Connect
+      run: psql postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com/ofnpknxi -c 'SELECT version()'
+    - name: Concat SQL and Execute
+      run: |
+          cd DATA
+          cat *.sql >> all.sql
+          echo "**** COMMANDS TO EXCUTE *****"
+          echo "$(<all.sql )"
+          echo "*****************************"
+          psql postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com/ofnpknxi -f all.sql   
