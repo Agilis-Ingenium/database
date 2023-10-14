@@ -1,6 +1,6 @@
 # This github action will DROP ALL THE TABLES
 
-name: DROP TABLES
+name: Drop Tables
 on:
   workflow_dispatch:
 jobs:
