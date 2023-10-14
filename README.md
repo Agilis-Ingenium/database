@@ -1,6 +1,6 @@
 # Database Codebase
 
-The codebase for PostGres db.
+The codebase for PostgreSQL data base.
 
 ## Sources for Github Actions 📖
 
