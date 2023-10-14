@@ -1,0 +1,8 @@
+name: Orchestation - DEV
+ 
+on:
+  workflow_run:
+    workflows: [ "Drop Tables", "Execute DDL", "Import Data", "Generate ERD with Fairy SQL" ]
+    types:
+      - completed
+  workflow_dispatch:
