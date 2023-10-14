@@ -1,0 +1,15 @@
+# This github action will DROP ALL THE TABLES
+
+name: :collision: DROP TABLES
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    name: DROP ALL TABLES
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Install postgres-client on ubunutu
+      run: sudo apt-get update && sudo apt-get install postgresql-client
+    - name: PSQL Connect + DROP TABLES
+      run: psql postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com/ofnpknxi -c 'drop schema public cascade;  create schema public;'
