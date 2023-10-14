@@ -1,6 +1,6 @@
 # This github action will DROP ALL THE TABLES
 
-name: :collision: DROP TABLES
+name: DROP TABLES
 on:
   workflow_dispatch:
 jobs:
