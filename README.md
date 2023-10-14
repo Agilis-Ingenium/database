@@ -7,3 +7,4 @@ The codebase for PostgreSQL data base.
 - https://www.timescale.com/blog/how-to-install-psql-on-mac-ubuntu-debian-windows/
 - https://www.postgresql.org/docs/current/app-psql.html
 - https://ckhung.medium.com/drawing-er-diagram-from-sql-file-alone-e7bef8cfe34b
+- https://www.wearecogworks.com/blog/quick-guide-to-running-sub-workflows-with-github-actions/
