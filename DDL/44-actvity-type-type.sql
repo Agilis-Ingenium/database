@@ -1,5 +1,3 @@
--- Create the activity_type type --
-
 CREATE TYPE activity_type AS ENUM (
   'yoga', 'aerobic exercise', 'strength training', 
   'running', 'swimming', 'walking', 
