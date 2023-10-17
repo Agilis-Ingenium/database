@@ -1,6 +1,6 @@
 CREATE TABLE metrics (
     metric_id SERIAL PRIMARY KEY,
-    user_id uuid NOT NULL,
+    user_id INT NOT NULL,
     weight DECIMAL(5, 2),
     height DECIMAL(5, 2),
     bmi DECIMAL(5, 2),
