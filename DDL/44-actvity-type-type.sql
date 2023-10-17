@@ -6,5 +6,5 @@ CREATE TYPE activity_type AS ENUM (
   'bicycling', 'bymnastics', 'water aerobics', 
   'dance', 'tennis', 'pilates', 'hiking', 
   'weightlifting', 'jogging', 'power walking', 
-  'gardening', 'inline skating'
+  'gardening', 'inline skating', 'other'
 );
