@@ -1,5 +1,3 @@
--- Create the activity_data table --
-
 CREATE TABLE activity_data (
     activity_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
     user_id INT NOT NULL,
