@@ -27,6 +27,8 @@ jobs:
 
     - name: Export DB
       run: |
+        sudo apt-get remove postgresql-client-common
+        sudo apt-get install -y postgresql-client
         pg_dump -d postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com:5432/ofnpknxi > all2.sql
         echo "------------"
         echo "$(<all2.sql )"
