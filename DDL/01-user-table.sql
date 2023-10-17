@@ -1,5 +1,3 @@
-/* LAB 5 */
-
 CREATE TABLE users (
    user_id INT NOT NULL,
    name VARCHAR (100) NOT NULL,
