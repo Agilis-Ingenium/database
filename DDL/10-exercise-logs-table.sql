@@ -1,6 +1,6 @@
 CREATE TABLE exercise_logs (
     log_id SERIAL PRIMARY KEY,
-    user_id uuid NOT NULL,
+    user_id INT NOT NULL,
     exercise_type VARCHAR(255) NOT NULL,
     duration_minutes INT NOT NULL,
     intensity VARCHAR(50),
