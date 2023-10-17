@@ -1,5 +1,5 @@
 CREATE TABLE fitness_goals (
-    goal_id INT AUTO_INCREMENT PRIMARY KEY,
+    goal_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
     user_id INT NOT NULL,
     goal_type VARCHAR(255) NOT NULL,
     target_value DECIMAL(10, 2) NOT NULL,
