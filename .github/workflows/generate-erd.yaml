@@ -24,6 +24,13 @@ jobs:
           echo "*****************************"
           cd ..
           mv DDL/all.sql ./all.sql
+
+    - name: Export DB
+      run: |
+        sudo apt install postgresql-client-15 -y        
+        pg_dump -d postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com:5432/ofnpknxi > all2.sql
+        echo "------------"
+        echo "$(<all2.sql )"
         
     - name: Install SQL Fairy
       run: sudo apt-get install sqlfairy
