@@ -1,5 +1,5 @@
 CREATE TABLE food_items (
-    food_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+    food_id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     calories INT NOT NULL,
     carbohydrates DECIMAL(8, 2) NOT NULL,
