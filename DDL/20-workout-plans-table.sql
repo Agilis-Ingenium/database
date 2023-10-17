@@ -1,6 +1,6 @@
 CREATE TABLE workout_plans (
     plan_id SERIAL PRIMARY KEY,
-    user_id uuid NOT NULL,
+    user_id INT NOT NULL,
     plan_name VARCHAR(255) NOT NULL,
     schedule VARCHAR(255),
     plan_date DATE,
