@@ -1,5 +1,5 @@
 CREATE TABLE exercise_logs (
-    log_id INT AUTO_INCREMENT PRIMARY KEY,
+    log_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
     user_id INT NOT NULL,
     exercise_type VARCHAR(255) NOT NULL,
     duration_minutes INT NOT NULL,
