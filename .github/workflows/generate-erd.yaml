@@ -3,7 +3,7 @@
 # Adapting the code and tools described in this article to make the workflow: 
 # https://nsaunders.wordpress.com/2009/01/11/easy-visualisation-of-database-schemas-using-sqlfairy/
 
-name: Generate ERD with Fairy SQL
+name: Generate ERD
 on:
   workflow_dispatch:
 jobs:
