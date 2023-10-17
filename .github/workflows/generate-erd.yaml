@@ -18,7 +18,7 @@ jobs:
     - name: Concat SQL
       run: |
           cd DDL
-          cat *.sql >> all.sql
+          cat *table.sql >> all.sql
           echo "**** COMMANDS TO DRAW *****"
           echo "$(<all.sql )"
           echo "*****************************"
