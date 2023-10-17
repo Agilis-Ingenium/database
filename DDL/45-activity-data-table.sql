@@ -1,5 +1,5 @@
 CREATE TABLE activity_data (
-    activity_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+    activity_id SERIAL PRIMARY KEY,
     user_id uuid NOT NULL,
     activity_type activity_type NOT NULL,
     duration_minutes INT NOT NULL,
