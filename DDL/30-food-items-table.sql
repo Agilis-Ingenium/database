@@ -1,5 +1,5 @@
 CREATE TABLE food_items (
-    food_id INT AUTO_INCREMENT PRIMARY KEY,
+    food_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
     name VARCHAR(255) NOT NULL,
     calories INT NOT NULL,
     carbohydrates DECIMAL(8, 2) NOT NULL,
