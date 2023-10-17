@@ -1,5 +1,5 @@
 CREATE TABLE calorie_intake (
-    intake_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+    intake_id SERIAL PRIMARY KEY,
     user_id uuid NOT NULL,
     food_item VARCHAR(255) NOT NULL,
     calories INT NOT NULL,
