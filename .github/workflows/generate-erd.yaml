@@ -27,8 +27,11 @@ jobs:
 
     - name: Export DB
       run: |
-        sudo apt-get remove postgresql-client-common
-        sudo apt-get install -y postgresql-client
+        sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+        wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+        sudo apt-get update
+        sudo apt-get -y install postgresql
+        
         pg_dump -d postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com:5432/ofnpknxi > all2.sql
         echo "------------"
         echo "$(<all2.sql )"
