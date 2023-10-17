@@ -1,5 +1,5 @@
 CREATE TABLE workout_plans (
-    plan_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+    plan_id SERIAL PRIMARY KEY,
     user_id uuid NOT NULL,
     plan_name VARCHAR(255) NOT NULL,
     schedule VARCHAR(255),
