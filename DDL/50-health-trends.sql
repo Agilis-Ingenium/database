@@ -1,6 +1,6 @@
 CREATE TABLE health_trends (
     trend_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
-    user_id INT NOT NULL,
+    uuid_id INT NOT NULL,
     metric_type VARCHAR(255) NOT NULL,
     trend_data JSON NOT NULL,
     trend_date DATE NOT NULL,
