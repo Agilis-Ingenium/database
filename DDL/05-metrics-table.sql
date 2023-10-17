@@ -1,6 +1,6 @@
 CREATE TABLE metrics (
     metric_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
-    user_id INT NOT NULL,
+    user_id uuid NOT NULL,
     weight DECIMAL(5, 2),
     height DECIMAL(5, 2),
     bmi DECIMAL(5, 2),
