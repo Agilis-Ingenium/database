@@ -24,24 +24,12 @@ jobs:
           echo "*****************************"
           cd ..
           mv DDL/all.sql ./all.sql
-
-    - name: Export DB
-      run: |
-        sudo apt install wget ca-certificates
-        wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-        sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
-        sudo apt update
-        sudo apt install postgresql postgresql-contrib
-       
-        pg_dump -d postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com:5432/ofnpknxi > all2.sql
-        echo "------------"
-        echo "$(<all2.sql )"
         
     - name: Install SQL Fairy
       run: sudo apt-get install sqlfairy
 
     - name: Run the drawing command
-      run: 	sqlt-graph -f MySQL -o erd.png -t png all2.sql --debug
+      run: 	sqlt-graph -f MySQL -o erd.png -t png all.sql --debug
 
     - name: Upload PNG
       uses: actions/upload-artifact@v3
