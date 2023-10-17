@@ -23,3 +23,7 @@ jobs:
           echo "$(<all.sql )"
           echo "*****************************"
           psql postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com/ofnpknxi -f all.sql   
+    - uses: actions/upload-artifact@v3
+      with:
+        name: sql
+        path: DDL/all.sql
