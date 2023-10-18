@@ -1,4 +1,4 @@
-CREATE TYPE sleep_quality_type AS ENUM (
+CREATE TYPE sleep_quality AS ENUM (
   'poor',
   'fair',
   'good',
