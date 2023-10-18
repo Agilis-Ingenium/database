@@ -1,6 +1,6 @@
 # Database Codebase
 
-The codebase for PostgreSQL database.
+The codebase for the PostgreSQL database.
 
 ## ERD
 
