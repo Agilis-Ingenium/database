@@ -6,6 +6,6 @@ CREATE TABLE users (
     first_name VARCHAR(50),
     last_name VARCHAR(50),
     date_of_birth DATE,
-    gender VARCHAR(10),
+    gender gender NOT NULL,
     registration_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
