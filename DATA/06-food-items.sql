@@ -1,7 +1,5 @@
 INSERT INTO food_items (name, calories, carbohydrates, proteins, fats, vitamins, minerals)
 VALUES
-    ('Chicken Breast', 165, 0.0, 31.0, 3.6, 'Vitamin B6, Vitamin B12', 'Iron, Zinc'),
-    ('Salmon', 206, 0.0, 22.0, 13.0, 'Vitamin D, Vitamin B12', 'Selenium, Omega-3 Fatty Acids'),
     ('Broccoli', 55, 11.2, 3.7, 0.6, 'Vitamin C, Vitamin K', 'Folate, Potassium'),
     ('Spinach', 23, 3.6, 2.9, 0.4, 'Vitamin A, Vitamin C', 'Iron, Folate'),
     ('Eggs', 68, 0.6, 5.5, 4.8, 'Vitamin D, Vitamin B12', 'Choline, Selenium'),
