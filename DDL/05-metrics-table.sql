@@ -9,7 +9,7 @@ CREATE TABLE metrics (
     heart_rate INT,
     blood_sugar DECIMAL(5, 2),
     sleep_duration INT,
-    sleep_quality VARCHAR(20),
+    sleep_quality sleep_quality,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
