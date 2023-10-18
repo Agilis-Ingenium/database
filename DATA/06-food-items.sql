@@ -17,8 +17,8 @@ VALUES
     ('Apples', 52, 14.0, 0.3, 0.2, 'Vitamin C, Fiber', 'Potassium, Vitamin A'),
     ('Tomatoes', 18, 3.9, 0.9, 0.2, 'Vitamin C, Vitamin K', 'Potassium, Folate'),
     ('Avocado', 160, 8.5, 2.0, 14.7, 'Vitamin K, Folate', 'Potassium, Monounsaturated Fats'),
-    ('Green Peas', 81, 14.5, 4.5, 0.5, 'Vitamin C, Vitamin K', 'Folate, Fiber');
+    ('Green Peas', 81, 14.5, 4.5, 0.5, 'Vitamin C, Vitamin K', 'Folate, Fiber'),
     ('Salmon', 206, 0.0, 22.0, 13.0, 'Vitamin D, Vitamin B12', 'Selenium, Omega-3 Fatty Acids'),
-    ('Kale', 33, 6.7, 2.9, 0.6, 'Vitamin K, Vitamin A', 'Calcium, Iron');
+    ('Kale', 33, 6.7, 2.9, 0.6, 'Vitamin K, Vitamin A', 'Calcium, Iron'),
     ('Chicken Breast', 165, 0.0, 31.0, 3.6, 'Vitamin B6, Vitamin B12', 'Iron, Zinc'),
     ('Broccoli', 55, 11.2, 3.7, 0.6, 'Vitamin C, Vitamin K', 'Folate, Potassium');
