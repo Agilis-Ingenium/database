@@ -1,4 +1,4 @@
-CREATE TYPE workout_schedule AS ENUM (
+CREATE TYPE schedule AS ENUM (
   'daily',
   'weekly',
   'bi-weekly',
