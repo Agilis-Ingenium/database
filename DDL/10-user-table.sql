@@ -7,5 +7,5 @@ CREATE TABLE users (
     last_name VARCHAR(50),
     date_of_birth DATE,
     gender VARCHAR(6) NOT NULL,
-    registration_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
