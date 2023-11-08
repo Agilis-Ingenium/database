@@ -15,7 +15,7 @@ jobs:
     - name: Decode secret
       shell: bash
       env:
-        STRATEGY_CONTEXT: ${{ toJson(env.WEIRD) }}
+        STRATEGY_CONTEXT: env.WEIRD
       run: echo "$STRATEGY_CONTEXT"
         
     - name: PSQL Connect + DROP TABLES
