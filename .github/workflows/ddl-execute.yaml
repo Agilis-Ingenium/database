@@ -14,7 +14,7 @@ jobs:
     - name: Install postgres-client on ubunutu
       run: sudo apt-get update && sudo apt-get install postgresql-client
     - name: PSQL Connect
-      run: psql {{ secrets.PSQL_URL }} -c 'SELECT version()'
+      run: psql ${{ secrets.PSQL_URL }} -c 'SELECT version()'
     - name: Concat SQL and Execute
       run: |
           cd DDL
@@ -22,7 +22,7 @@ jobs:
           echo "**** COMMANDS TO EXCUTE *****"
           echo "$(<all.sql )"
           echo "*****************************"
-          psql {{ secrets.PSQL_URL }} -f all.sql   
+          psql ${{ secrets.PSQL_URL }} -f all.sql   
     - uses: actions/upload-artifact@v3
       with:
         name: sql
