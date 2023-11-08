@@ -13,5 +13,5 @@ jobs:
       run: sudo apt-get update && sudo apt-get install postgresql-client
     - name: PSQL Connect + DROP TABLES
       run: |
-        PSQL_URL = `echo ${{ secrets.PSQL_URL }} | base64 --decode`
+        echo "PSQL_URL=$(echo ${{ secrets.PSQL_URL }} | base64 --decode)" >> $GITHUB_ENV
         psql $PSQL_URL -c 'drop schema public cascade;  create schema public;'
