@@ -18,7 +18,7 @@ jobs:
         PSQL_URL: ${{ secrets.PSQL_URL }}
       run: |
         DECODED = $(echo "$PSQL_URL" | base64 --decode)
-        echo $DECODED
+        echo "$DECODED"
         
     - name: PSQL Connect + DROP TABLES
       run: |
