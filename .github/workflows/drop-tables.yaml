@@ -15,12 +15,15 @@ jobs:
     - name: Decode secret
       shell: bash
       env:
-        PSQL_URL: ${{ secrets.PSQL_URL }}
-      run: echo "PSQL_URL=$(echo "$PSQL_URL" | base64 --decode)" >> $GITHUB_ENV
+        ENCODED: ${{ env.WEIRD }}
+      run: |
+        echo "${{ env.WEIRD }}"
+        echo "$ENCODED"
+        echo "DECODED=$(echo "$ENCODED" | base64 --decode)" >> $GITHUB_ENV
         
     - name: PSQL Connect + DROP TABLES
       run: |
-        echo $PSQL_URL
+        echo $DECODED
         # echo "PSQL_URL=$(echo ${{ secrets.PSQL_URL }} | base64 --decode)" >> $GITHUB_ENV
         # psql $PSQL_URL -c 'drop schema public cascade;  create schema public;'
   
