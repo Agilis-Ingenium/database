@@ -3,6 +3,7 @@
 name: Import Data
 on:
   workflow_dispatch:
+
 jobs:
   deploy:
     name: Import Data into DB
@@ -14,7 +15,7 @@ jobs:
     - name: Install postgres-client on ubunutu
       run: sudo apt-get update && sudo apt-get install postgresql-client
     - name: PSQL Connect
-      run: psql postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com/ofnpknxi -c 'SELECT version()'
+      run: psql ${{ secrets.PSQL_URL }} -c 'SELECT version()'
     - name: Concat SQL and Execute
       run: |
           cd DATA
@@ -22,4 +23,4 @@ jobs:
           echo "**** COMMANDS TO EXCUTE *****"
           echo "$(<all.sql )"
           echo "*****************************"
-          psql postgres://ofnpknxi:mIyip-QntL4PJWk_LINrtBfEklbMkSYt@flora.db.elephantsql.com/ofnpknxi -f all.sql   
+          psql ${{ secrets.PSQL_URL }} -f all.sql   
