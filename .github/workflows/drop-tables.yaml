@@ -16,7 +16,7 @@ jobs:
       shell: bash
       env:
         STRATEGY_CONTEXT: Hello
-      run: echo "$STRATEGY_CONTEXT"
+      run: echo "$STRATEGY_CONTEXT" ${{ env.WEIRD }}
         
     - name: PSQL Connect + DROP TABLES
       run: |
