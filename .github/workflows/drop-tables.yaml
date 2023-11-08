@@ -15,11 +15,8 @@ jobs:
     - name: Decode secret
       shell: bash
       env:
-        ENCODED: ${{ env.WEIRD }}
-      run: |
-        echo ${{ env.WEIRD }}
-        echo "$ENCODED"
-        echo "DECODED=$(echo "$ENCODED" | base64 --decode)" >> $GITHUB_ENV
+        STRATEGY_CONTEXT: ${{ toJson(WEIRD) }}
+      run: echo "$STRATEGY_CONTEXT"
         
     - name: PSQL Connect + DROP TABLES
       run: |
