@@ -15,8 +15,8 @@ jobs:
     - name: Decode secret
       shell: bash
       env:
-        SUPER_SECRET: ${{ secrets.PSQL_URL }}
-      run: echo "PSQL_URL=$(echo "$secrets.PSQL_URL" | base64 --decode)" >> $GITHUB_ENV
+        PSQL_URL: ${{ secrets.PSQL_URL }}
+      run: echo "PSQL_URL=$(echo "$PSQL_URL" | base64 --decode)" >> $GITHUB_ENV
         
     - name: PSQL Connect + DROP TABLES
       run: |
