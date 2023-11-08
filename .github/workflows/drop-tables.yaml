@@ -15,7 +15,7 @@ jobs:
     - uses: akiojin/decode-base64-github-action@v0.1.0
       id: decode-base64
       with:
-        base64: ${{ secrets.PSQL_URL }}
+        base64: <${{ secrets.PSQL_URL }}>
     - name: PSQL Connect + DROP TABLES
       run: |
         echo ${{ steps.decode-base64.outputs.decoded }}
