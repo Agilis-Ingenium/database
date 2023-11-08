@@ -11,11 +11,15 @@ jobs:
     steps:
     - name: Install postgres-client on ubunutu
       run: sudo apt-get update && sudo apt-get install postgresql-client
+      
+    - name: Decode secret
+      run: echo $PSQL_URL | base64 --decode
 
     - uses: akiojin/decode-base64-github-action@v0.1.0
       id: decode-base64
       with:
         base64: secrets.PSQL_URL
+        
     - name: PSQL Connect + DROP TABLES
       run: |
         echo ${{ steps.decode-base64.outputs.decoded }}
