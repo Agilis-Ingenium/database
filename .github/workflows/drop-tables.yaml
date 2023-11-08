@@ -17,7 +17,7 @@ jobs:
       env:
         ENCODED: ${{ env.WEIRD }}
       run: |
-        echo "${{ env.WEIRD }}"
+        echo ${{ env.WEIRD }}
         echo "$ENCODED"
         echo "DECODED=$(echo "$ENCODED" | base64 --decode)" >> $GITHUB_ENV
         
