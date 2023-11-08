@@ -12,4 +12,6 @@ jobs:
     - name: Install postgres-client on ubunutu
       run: sudo apt-get update && sudo apt-get install postgresql-client
     - name: PSQL Connect + DROP TABLES
-      run: psql ${{ secrets.PSQL_URL }} -c 'drop schema public cascade;  create schema public;'
+      run: |
+        PSQL_URL = `echo ${{ secrets.PSQL_URL }} | base64 --decode`
+        psql $PSQL_URL -c 'drop schema public cascade;  create schema public;'
