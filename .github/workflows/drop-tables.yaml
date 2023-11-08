@@ -22,8 +22,7 @@ jobs:
         
     - name: PSQL Connect + DROP TABLES
       run: |
-        echo $DECODED
         # echo "PSQL_URL=$(echo ${{ secrets.PSQL_URL }} | base64 --decode)" >> $GITHUB_ENV
-        # psql $PSQL_URL -c 'drop schema public cascade;  create schema public;'
+        psql $(echo "$PSQL_URL" | base64 --decode) -c 'drop schema public cascade;  create schema public;'
   
   
