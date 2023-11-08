@@ -15,8 +15,9 @@ jobs:
     - name: Decode secret
       shell: bash
       env:
-        STRATEGY_CONTEXT: Hello
-      run: echo "$STRATEGY_CONTEXT ${{ env.WEIRD }}"
+        PSQL_URL: ${{ secrets.PSQL_URL }}
+      run: |
+        echo $PSQL_URL | base64 --decode
         
     - name: PSQL Connect + DROP TABLES
       run: |
