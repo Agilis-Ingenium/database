@@ -17,7 +17,7 @@ jobs:
       env:
         PSQL_URL: ${{ secrets.PSQL_URL }}
       run: |
-        echo "${{ secrets.PSQL_URL }}" | base64 --decode
+        echo "$PSQL_URL" | base64 --decode
         
     - name: PSQL Connect + DROP TABLES
       run: |
