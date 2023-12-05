@@ -8,7 +8,8 @@ VALUES
     '2023-09-29',
     'Weight Loss',
     '4 Weeks',
-    'A comprehensive plan focused on cardio exercises, strength training, and a balanced diet.'
+    'A comprehensive plan focused on cardio exercises, strength training, and a balanced diet.',
+    'content'
   ),
   (
     1,
@@ -17,7 +18,8 @@ VALUES
     '2023-09-30',
     'Cardiovascular Health',
     '6 Days',
-    'A high-intensity cardio plan targeting overall cardiovascular health.'
+    'A high-intensity cardio plan targeting overall cardiovascular health.',
+    'content'
   ),
   (
     1,
@@ -26,7 +28,8 @@ VALUES
     '2023-09-30',
     'Flexibility Improvement',
     '2 Weeks',
-    'Focuses on yoga-based routines to enhance flexibility and reduce stiffness.'
+    'Focuses on yoga-based routines to enhance flexibility and reduce stiffness.',
+    'content'
   ),
   (
     1,
@@ -35,5 +38,6 @@ VALUES
     '2023-10-02',
     'Muscle Gain',
     '1 Month',
-    'Intense strength training regimen to stimulate muscle growth and strength.'
+    'Intense strength training regimen to stimulate muscle growth and strength.',
+    'content'
   )
