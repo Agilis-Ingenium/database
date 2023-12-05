@@ -4,5 +4,9 @@ CREATE TABLE workout_plans (
     plan_name VARCHAR(255) NOT NULL,
     schedule VARCHAR(20),
     plan_date DATE,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    goal INT,
+    duration VARCHAR(20),
+    description VARCHAR(150),
+    content TEXT
 );
