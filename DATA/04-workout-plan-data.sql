@@ -1,5 +1,5 @@
 INSERT INTO
-  workout_plans (user_id, plan_name, schedule, plan_date, goal, duration), description, content)
+  workout_plans (user_id, plan_name, schedule, plan_date, goal, duration, description, content)
 VALUES
   (
     1,
