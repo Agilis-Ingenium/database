@@ -1,23 +1,23 @@
 INSERT INTO activity_data (user_id, activity_type, duration_minutes, distance_km, workout_intensity, activity_date) 
 VALUES 
-("1", "yoga", 20, NULL, "low", "2023-01-05")
-("1", "running", 30, 5.2, "light", "2023-01-18")
-("1", "swimming", 45, 1.5, "moderate", "2023-01-31")
-("1", "bicycling", 60, 100, "low-to-moderate", "2023-02-13")
-("1", "walking", 120, 10, "moderate-intensity", "2023-02-26")
-("1", "dance", 20, NULL, "high", "2023-03-11")
-("1", "tennis", 30, NULL, "high-intensity", "2023-03-24")
-("1", "hiking", 45, 60, "very high", "2023-04-06")
-("1", "weightlifting", 60, NULL, "extreme", "2023-04-19")
-("1", "jogging", 120, 30, "varied", "2023-05-02")
-("1", "walking", 20, 10, "default", "2023-05-15")
-("1", "gardening", 30, NULL, "low", "2023-05-28")
-("1", "inline skating", 45, 2, "light", "2023-06-10")
-("1", "gymnasitics", 60, NULL, "moderate", "2023-06-23")
-("1", "bymnastics", 120, NULL, "low-to-moderate", "2023-07-06")
-("1", "water aerobics", 20, NULL, "moderate-intensity", "2023-07-19")
-("1", "strength training", 30, NULL, "high", "2023-08-01")
-("1", "pilates", 45, NULL, "high-intensity", "2023-08-14")
-("1", "aerobic exercise", 60, NULL, "very high", "2023-08-27")
-("1", "other", 120, NULL, "extreme", "2023-09-09")
-("1", "default", 30, 5, "varied", "2023-09-22")
+(1, 'yoga', 20, NULL, 'low', '2023-01-05'),
+(1, 'running', 30, 5.2, 'light', '2023-01-18'),
+(1, 'swimming', 45, 1.5, 'moderate', '2023-01-31'),
+(1, 'bicycling', 60, 100, 'low-to-moderate', '2023-02-13'),
+(1, 'walking', 120, 10, 'moderate-intensity', '2023-02-26'),
+(1, 'dance', 20, NULL, 'high', '2023-03-11'),
+(1, 'tennis', 30, NULL, 'high-intensity', '2023-03-24'),
+(1, 'hiking', 45, 60, 'very high', '2023-04-06'),
+(1, 'weightlifting', 60, NULL, 'extreme', '2023-04-19'),
+(1, 'jogging', 120, 30, 'varied', '2023-05-02'),
+(1, 'walking', 20, 10, 'default', '2023-05-15'),
+(1, 'gardening', 30, NULL, 'low', '2023-05-28'),
+(1, 'inline skating', 45, 2, 'light', '2023-06-10'),
+(1, 'gymnasitics', 60, NULL, 'moderate', '2023-06-23'),
+(1, 'bymnastics', 120, NULL, 'low-to-moderate', '2023-07-06'),
+(1, 'water aerobics', 20, NULL, 'moderate-intensity', '2023-07-19'),
+(1, 'strength training', 30, NULL, 'high', '2023-08-01'),
+(1, 'pilates', 45, NULL, 'high-intensity', '2023-08-14'),
+(1, 'aerobic exercise', 60, NULL, 'very high', '2023-08-27'),
+(1, 'other', 120, NULL, 'extreme', '2023-09-09'),
+(1, 'default', 30, 5, 'varied', '2023-09-22');
