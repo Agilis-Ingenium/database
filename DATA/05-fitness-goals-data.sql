@@ -6,4 +6,4 @@ VALUES
     (1, 'nutrition', 5.0, '2023-11-30', false),
     (1, 'health', 10.0, '2023-12-31', false),
     (1, 'other', 10.0, '2024-06-01', false),
-    (1, 'muscle_gain', 5.0, '2023-04-01', true),
+    (1, 'muscle_gain', 5.0, '2023-04-01', true);
