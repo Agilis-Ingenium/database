@@ -20,5 +20,4 @@ VALUES
     ('Green Peas', 81, 14.5, 4.5, 0.5, 'Vitamin C, Vitamin K', 'Folate, Fiber'),
     ('Salmon', 206, 0.0, 22.0, 13.0, 'Vitamin D, Vitamin B12', 'Selenium, Omega-3 Fatty Acids'),
     ('Kale', 33, 6.7, 2.9, 0.6, 'Vitamin K, Vitamin A', 'Calcium, Iron'),
-    ('Chicken Breast', 165, 0.0, 31.0, 3.6, 'Vitamin B6, Vitamin B12', 'Iron, Zinc'),
-    ('Broccoli', 55, 11.2, 3.7, 0.6, 'Vitamin C, Vitamin K', 'Folate, Potassium');
+    ('Chicken Breast', 165, 0.0, 31.0, 3.6, 'Vitamin B6, Vitamin B12', 'Iron, Zinc');
