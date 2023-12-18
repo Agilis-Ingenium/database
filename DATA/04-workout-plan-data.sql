@@ -40,4 +40,4 @@ VALUES
     '1 Month',
     'Intense strength training regimen to stimulate muscle growth and strength.',
     'content'
-  )
+  );
