@@ -18,7 +18,7 @@ VALUES
     '2023-09-30',
     'Cardiovascular Health',
     '6 Days',
-    'A high-intensity cardio plan targeting overall cardiovascular health.',
+    'A high-intensity cardio exercise plan targeting overall cardiovascular health and endurance.',
     'content'
   ),
   (
