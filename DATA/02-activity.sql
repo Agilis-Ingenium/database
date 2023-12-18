@@ -13,7 +13,7 @@ VALUES
 (1, 'walking', 20, 10, 'default', '2023-05-15'),
 (1, 'gardening', 30, NULL, 'low', '2023-05-28'),
 (1, 'inline skating', 45, 2, 'light', '2023-06-10'),
-(1, 'gymnasitics', 60, NULL, 'moderate', '2023-06-23'),
+(1, 'gymnastics', 60, NULL, 'moderate', '2023-06-23'),
 (1, 'bymnastics', 120, NULL, 'low-to-moderate', '2023-07-06'),
 (1, 'water aerobics', 20, NULL, 'moderate-intensity', '2023-07-19'),
 (1, 'strength training', 30, NULL, 'high', '2023-08-01'),
