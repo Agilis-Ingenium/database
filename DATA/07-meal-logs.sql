@@ -9,8 +9,8 @@ INSERT INTO meal_log_food_items (meal_log_id, food_id, quantity, calories)
 VALUES
     (1, 1, 6.0, 990),
     (1, 2, 2.0, 110),
-    (1, 1, 6.0, 990),
-    (2, 2, 2.0, 110);
+    (1, 6, 6.0, 990),
+    (2, 8, 2.0, 110);
 
 -- Insert more data into the "meal_logs" table
 INSERT INTO meal_logs (user_id, meal_time, total_calories)
@@ -21,5 +21,5 @@ VALUES
 -- Insert more data into the "meal_log_food_items" table
 INSERT INTO meal_log_food_items (meal_log_id, food_id, quantity, calories)
 VALUES
-    (2, 1, 4.0, 824),
-    (4, 2, 2.5, 82);
+    (2, 9, 4.0, 824),
+    (4, 10, 2.5, 82);
